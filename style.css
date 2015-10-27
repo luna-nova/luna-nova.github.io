@@ -1,0 +1,90 @@
+
+/********************************************
+Tag Resets
+********************************************/
+
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+th,
+td,
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/*=============================================*/
+
+.main-navbar {
+  float: left;
+  position: fixed;
+  width: 125px;
+  min-height: 654px;
+  height: 100%;
+  background-color: rgb(54, 50, 61);
+  -webkit-box-shadow: 4px 0px 2px 0px rgb(5, 5, 5);
+  -moz-box-shadow: 4px 0px 2px 0px rgb(5, 5, 5);
+  box-shadow: 4px 0px 2px 0px rgb(5, 5, 5);
+}
+
+.main-navbar li {
+  text-align: center;
+}
+
+#profile-picture-container {
+  width: 100px;
+  margin-top: 8%;
+  margin-left: 8%;
+}
+
+#profile-avatar {
+  width: 100%;
+  border: 2px solid white;
+  border-radius: 50px;
+}
+
+/*==================FONTS + COLORS=======================*/
+
+.font-ubuntu {
+  font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+.blue-text {
+  color: rgb(164, 204, 227);
+}
+.red-text {
+  color: rgb(231, 164, 164);
+}
+.green-text {
+  color: rgb(182, 240, 187);
+}
+.yellow-text {
+  color: rgb(237, 234, 167);
+}

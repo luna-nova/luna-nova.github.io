@@ -16,10 +16,10 @@ $(document).on("ready", function() {
 
   $(".icon").hover(
   function() {
-    $(this).next().slideDown("fast");
+    $(this).closest(".image-link").next().slideDown("fast");
   },
   function() {
-    $(this).next().slideUp("fast");
+    $(this).closest(".image-link").next().slideUp("fast");
   });
 
 

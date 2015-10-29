@@ -1,0 +1,109 @@
+
+/********************************************
+Tag Resets
+********************************************/
+
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+th,
+td,
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: #000000;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+/*=============================================*/
+
+.main-navbar {
+  float: left;
+  position: fixed;
+  width: 125px;
+  min-height: 654px;
+  height: 100%;
+  background-color: rgb(54, 50, 61);
+  -webkit-box-shadow: 4px 0px 2px 0px rgb(5, 5, 5);
+  -moz-box-shadow: 4px 0px 2px 0px rgb(5, 5, 5);
+  box-shadow: 4px 0px 2px 0px rgb(5, 5, 5);
+}
+
+#profile-picture-container {
+  width: 100px;
+  margin-top: 8%;
+  margin-left: 7%;
+  margin-bottom: 30%;
+}
+#profile-avatar {
+  width: 100%;
+  border: 4px solid white;
+  border-radius: 50px;
+}
+
+.main-navbar li {
+  text-align: center;
+}
+.link-space {
+  height: 125px;
+}
+.text {
+  display: none;
+}
+.icon {
+  width: 48px;
+}
+
+/*==================FONTS + COLORS=======================*/
+
+.font-ubuntu {
+  font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+.blue {
+  color: rgb(164, 204, 227);
+}
+.red {
+  color: rgb(231, 164, 164);
+}
+.green {
+  color: rgb(182, 240, 187);
+}
+.yellow {
+  color: rgb(237, 234, 167);
+}

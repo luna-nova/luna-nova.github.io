@@ -39,7 +39,8 @@ $(document).on("ready", function() {
   );
 
   //MUSIC PAGE: Color Block Focus Animation
-
+  //TODO: A Cleaner Way to do this. I'm new to JQuery >:v
+  
   $(".music-info-box").hover(
     function() {
       var musicParent = $(this).closest(".music-section");

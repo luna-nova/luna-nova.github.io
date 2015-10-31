@@ -108,10 +108,59 @@ h1 {
   display: inline-block;
   width: 50%;
 }
-.main-content hr {
+
+/*===================MUSIC PAGE==========================*/
+
+#music-background {
+  background-image: url("http://www.woollettaquanet.info/SheetMusic/background-rotate/04-MusicOldSheets.jpg");
+}
+#music-title {
+  display: block;
+  background-color: white;
+  padding-top: 8px;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  text-align: center;
+}
+
+.music-info-album-box,
+.music-info-box {
+  position: relative;
+  display: inline;
+  background-color: white;
+  height: 200px;
+  padding: 12px;
+  margin-top: 75px;
+}
+.music-info-album-box {
+  float: left;
+}
+.music-info-box {
+  float: right;
+  width: 50%;
+}
+
+.color-block-horizontal,
+.color-block-vertical {
+  position: absolute;
+  display: none;
+}
+.color-block-horizontal {
+  width: 100%;
   height: 12px;
-  border: 0;
-  box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+}
+.color-block-vertical {
+  width: 12px;
+  height: 100%;
+}
+.top {
+  top: 0;
+  left: 0;
+}
+.bottom {
+  bottom: 0;
+  right: 0;
 }
 
 /*==================FONTS + COLORS=======================*/
@@ -126,17 +175,30 @@ h1 {
   font-family: 'Quicksand', sans-serif;
 }
 
+
 .blue {
   color: rgb(164, 204, 227);
+}
+.blue-background {
+  background-color: rgb(164, 204, 227);
 }
 .red {
   color: rgb(231, 164, 164);
 }
+.red-background {
+  background-color: rgb(231, 164, 164);
+}
 .green {
   color: rgb(182, 240, 187);
 }
+.green-background {
+  background-color: rgb(182, 240, 187);
+}
 .yellow {
   color: rgb(237, 234, 167);
+}
+.yellow-background {
+  background-color: rgb(237, 234, 167);
 }
 
 /*==================IMAGE STYLES=======================*/
@@ -155,6 +217,11 @@ h1 {
   border-top: 1px solid black;
 }
 
+.img-small {
+  width: 200px;
+  height: 200px;
+}
+
 /*==================MISC. CLASSES=======================*/
 
 .email-link {
@@ -162,4 +229,21 @@ h1 {
   color: rgb(21, 52, 52);
   font-weight: bold;
   text-shadow: 2px 2px 4px rgba(150, 150, 150, 1);
+}
+
+.fade-rule {
+  height: 12px;
+  border: 0;
+  box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+}
+
+.spacer {
+  height: 5%;
+  display: block;
+}
+
+.art-credit {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
 }

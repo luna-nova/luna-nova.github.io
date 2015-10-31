@@ -30,12 +30,33 @@ $(document).on("ready", function() {
 
   //SIDEBAR: Sliding link text
   $(".icon").hover(
-  function() {
-    $(this).closest(".image-link").next().stop().slideDown("fast");
-  },
-  function() {
-    $(this).closest(".image-link").next().stop().slideUp("fast");
-  });
+    function() {
+      $(this).closest(".image-link").next().stop().slideDown("fast");
+    },
+    function() {
+      $(this).closest(".image-link").next().stop().slideUp("fast");
+    }
+  );
 
+  //MUSIC PAGE: Color Block Focus Animation
+
+  $(".music-info-box").hover(
+    function() {
+      var musicParent = $(this).closest(".music-section");
+
+      musicParent.find("#cba1").show("slide", { direction: "left"}, 200 );
+      musicParent.find("#cba2").show("slide", { direction: "right"}, 200 );
+      musicParent.find("#cba3").show("slide", { direction: "down"}, 200 );
+      musicParent.find("#cba4").show("slide", { direction: "up"}, 200 );
+    },
+    function() {
+      var musicParent = $(this).closest(".music-section");
+
+      musicParent.find("#cba1").hide("slide", { direction: "left"}, 200 );
+      musicParent.find("#cba2").hide("slide", { direction: "right"}, 200 );
+      musicParent.find("#cba3").hide("slide", { direction: "down"}, 200 );
+      musicParent.find("#cba4").hide("slide", { direction: "up"}, 200 );
+    }
+  );
 
 })

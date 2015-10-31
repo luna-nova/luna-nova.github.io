@@ -83,6 +83,7 @@ a:active {
 }
 .text {
   display: none;
+  /*For fun animation purposes, of course!*/
 }
 .icon {
   width: 48px;
@@ -162,6 +163,11 @@ h1 {
   bottom: 0;
   right: 0;
 }
+.album-art-credit {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+}
 
 /*==================FONTS + COLORS=======================*/
 
@@ -240,10 +246,4 @@ h1 {
 .spacer {
   height: 5%;
   display: block;
-}
-
-.art-credit {
-  position: absolute;
-  bottom: 12px;
-  right: 12px;
 }

@@ -185,9 +185,10 @@ h1 {
 }
 
 .main-content {
-  width: 70%;
-  margin-left: 15%;
-  margin-right: 15%;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  background-color: white;
   display: inline-block;
 }
 /*-------------IMAGE STYLES---------------*/
@@ -212,7 +213,8 @@ h1 {
 }
 
 .img-album {
-
+  width: 100px;
+  height: 100px;
 }
 /*-------------MUSIC PAGE--------------*/
 
@@ -223,10 +225,10 @@ h1 {
   display: block;
   background-color: white;
   padding-top: 8px;
-  border-left: 2px solid black;
-  border-right: 2px solid black;
-  border-bottom: 2px solid black;
   text-align: center;
+}
+.music-title-rule {
+  margin: 0;
 }
 
 .music-info-album-box,
@@ -275,7 +277,7 @@ h1 {
 
 /*------------MEDIA QUERIES------------*/
 
-@media screen and (max-width: 594px) {
+@media screen and (max-width: 580px) {
 /*Prevent larger screens from ever loading this ineffective styling*/
   @media screen and (min-width: 380px) {
     #profile-picture-container {
@@ -339,7 +341,7 @@ h1 {
 /*========================================================*/
 /*========================================================*/
 
-@media screen and (min-width: 564px) {
+@media screen and (min-width: 570px) {
 
   /*----------------SIDE NAVBAR-----------------*/
 
@@ -391,10 +393,11 @@ h1 {
   }
 
   .main-content {
-    margin-left: 31%;
+    margin-left: 28%;
     margin-right: 0;
     display: inline-block;
-    width: 60%;
+    background-color: rgba(255, 255, 255, 0);
+    width: 64%;
   }
   /*-----------IMAGE STYLES-----------*/
 
@@ -406,22 +409,31 @@ h1 {
     width: 150px;
     height: 150px;
   }
+  .img-album {
+    width: 125px;
+    height: 125px;
+  }
 
   /*-------------MUSIC PAGE--------------*/
 
-  /*#music-background {
-    background-image: url("http://www.woollettaquanet.info/SheetMusic/background-rotate/04-MusicOldSheets.jpg");
+  .music-info-album-box {
+    height: 125px;
+  }
+  .music-info-box {
+    font-size: 14px;
+  }
+  .music-info-box {
+    width: 50%;
   }
   #music-title {
-    display: block;
-    background-color: white;
-    padding-top: 8px;
     border-left: 2px solid black;
     border-right: 2px solid black;
     border-bottom: 2px solid black;
-    text-align: center;
   }
-
+  .music-title-rule {
+    display: none;
+  }
+  /*
   .music-info-album-box,
   .music-info-box {
     position: relative;
@@ -472,7 +484,11 @@ h1 {
       margin-left: 27%;
       width: 65%;
     }
+    .music-info-box {
+      width: 48%;
+    }
   }
+
   @media screen and (min-width: 760px) {
     .main-content {
       margin-left: 27%;
@@ -482,12 +498,30 @@ h1 {
       width: 200px;
       height: 200px;
     }
+    .img-album {
+      height: 200px;
+      width: 200px;
+    }
+    .music-info-box,
+    .music-info-album-box {
+      height: 200px;
+    }
+    .music-info-box {
+      width: 40%;
+    }
+    .album-art-credit {
+      display: block;
+    }
   }
+
   @media screen and (min-width: 940px) {
     .main-content {
       margin-left: 26%;
       width: 60%;
     }
+    .music-info-box {
+      font-size: 16px;
+      width: 50%;
+    }
   }
-
 }

@@ -52,12 +52,12 @@ $(document).on("ready", function() {
   //SIDEBAR: Sliding link text
   $(".icon").hover(
     function() {
-      if (winWidth > 564) {
+      if (winWidth > 580) {
         $(this).closest(".image-link").next().stop().slideDown("fast");
       }
     },
     function() {
-      if (winWidth > 564) {
+      if (winWidth > 580) {
         $(this).closest(".image-link").next().stop().slideUp("fast");
       }
     }

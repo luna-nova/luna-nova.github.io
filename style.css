@@ -301,7 +301,7 @@ h1 {
     float: left;
     margin-top: 0;
     margin-bottom: 1%;
-    margin-left: 2%;
+    margin-left: 3%;
     margin-right: 0;
     display: inline-block;
   }
@@ -325,12 +325,53 @@ h1 {
   }
 }
 
-@media screen and (max-width: 464px) {
+@media screen and (max-width: 492px) {
+  .main-navbar {
+    max-height: 100px;
+  }
   .icon {
-    width: 24px;
+    width: 36px;
   }
   #profile-picture-container {
     width: 75px;
     height: 75px;
+    margin-top: 1%;
+    margin-right: 8%;
+  }
+  .main-navbar li {
+    margin-left: 6%;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  #profile-picture-container {
+    margin-right: 4%;
+  }
+  .main-navbar li {
+    margin-left: 5%;
+    margin-right: 0;
+  }
+  .icon {
+    width: 28px;
+  }
+}
+
+@media screen and (max-width: 352px) {
+  .icon {
+    width: 24px;
+  }
+  #profile-picture-container {
+    width: 60px;
+    height: 60px;
+    margin-top: 3%;
+  }
+  .link-space {
+    padding-top: 18px;
+  }
+  .main-navbar li {
+    margin-left: 4%;
+  }
+  .about-content {
+    font-size: 14px;
   }
 }

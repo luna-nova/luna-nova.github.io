@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width" charset="utf-8">
     <!-- =============STYLESHEETS================ -->
-    <link rel="stylesheet" href="../style.css" type="text/css">
+    <link rel="stylesheet" href="../style.css">
     <!-- ===============FONTS==================== -->
-    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,300' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,300" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet" type="text/css">
     <!-- ==============SCRIPTS=================== -->
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="../js/action.js"></script>
+    <script src="../js/action.js"></script>
     <title>A Magical World</title>
   </head>
   <body id="music-background">
@@ -54,28 +54,79 @@
     <!-- ======================================================= -->
     <div class="main-content">
       <h1 class="font-josefin blue" id="music-title">MUSIC</h1>
+      <section class="music-section">
+        <div class="music-info-album-box">
+           <!-- HOVER BOX ANIMATION -->
+          <div class="cba1 top red-background color-block-horizontal"></div>
+          <div class="cba2 bottom blue-background color-block-horizontal"></div>
+          <div class="cba3 top green-background color-block-vertical"></div>
+          <div class="cba4 bottom yellow-background color-block-vertical"></div>
+          <!-- ON INFO BOX -->
+          <img src="../images/nattura-album-cover.jpg" class="img-album"/>
+        </div>
+        <div class="music-info-box font-quicksand">
+          <h2 class="font-ubuntu">NATTURA MUSICA</h2>
+          <hr class="album-title-rule">
+          <p>
+            This OST was designed for my own custom Dungeons & Dragons campaign called "<span class="darker-green">Nattura</span>".
+          </p>
+          <span class="spacer"></span>
+          <p>
+            You can visit <a class="darker-red" href="http://lunanova.bandcamp.com" target="_blank">here</a> to hear the album on Bandcamp.
+          </p>
+          <h6 class="album-art-credit">Art by: billyxkaplan.tumblr.com</h6>
+        </div>
+      </section>
+
+      <hr class="music-section-rule">
 
       <section class="music-section">
         <div class="music-info-album-box">
            <!-- HOVER BOX ANIMATION -->
-          <div id="cba1" class="top red-background color-block-horizontal"></div>
-          <div id="cba2" class="bottom blue-background color-block-horizontal"></div>
-          <div id="cba3" class="top green-background color-block-vertical"></div>
-          <div id="cba4" class="bottom yellow-background color-block-vertical"></div>
+          <div class="cba1 top red-background color-block-horizontal"></div>
+          <div class="cba2 bottom blue-background color-block-horizontal"></div>
+          <div class="cba3 top green-background color-block-vertical"></div>
+          <div class="cba4 bottom yellow-background color-block-vertical"></div>
           <!-- ON INFO BOX -->
-          <img src="../images/nattura-album-cover.jpg" class="img-small"/>
+          <img src="../images/nattura-album-cover.jpg" class="img-album"/>
         </div>
         <div class="music-info-box font-quicksand">
           <h2 class="font-ubuntu">NATTURA MUSICA</h2>
-          <hr>
+          <hr class="album-title-rule">
           <p>
-            This OST was designed for my own custom Dungeons & Dragons campaign called "<span style="color: rgb(112, 149, 115);">Nattura</span>".
+            This OST was designed for my own custom Dungeons & Dragons campaign called "<span class="darker-green">Nattura</span>".
           </p>
           <span class="spacer"></span>
           <p>
-            You can visit <a style="color: rgb(231, 164, 164);" href="http://lunanova.bandcamp.com" target="_blank">here</a> to hear the album on Bandcamp.
+            You can visit <a class="darker-red" href="http://lunanova.bandcamp.com" target="_blank">here</a> to hear the album on Bandcamp.
           </p>
           <h6 class="album-art-credit">Art by: billyxkaplan.tumblr.com</h6>
+        </div>
+      </section>
+
+      <hr class="music-section-rule">
+
+      <section class="music-section">
+        <div class="music-info-album-box">
+           <!-- HOVER BOX ANIMATION -->
+          <div class="cba1 top red-background color-block-horizontal"></div>
+          <div class="cba2 bottom blue-background color-block-horizontal"></div>
+          <div class="cba3 top green-background color-block-vertical"></div>
+          <div class="cba4 bottom yellow-background color-block-vertical"></div>
+          <!-- ON INFO BOX -->
+          <img src="../images/ahhart.jpg" class="img-album"/>
+        </div>
+        <div class="music-info-box font-quicksand">
+          <h2 class="font-ubuntu">SOUNDCLOUD</h2>
+          <hr class="album-title-rule">
+          <p>
+            I have a SoundCloud account where I upload miscellaneous snippets of music that I compose.
+          </p>
+          <span class="spacer"></span>
+          <p>
+            You can visit <a class="darker-red" href="https://soundcloud.com/lunanova" target="_blank">here</a> to hear snippets of music on SoundCloud.
+          </p>
+          <h6 class="album-art-credit">Photo by: Jeff Fitzwater</h6>
         </div>
       </section>
 

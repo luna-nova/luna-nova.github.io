@@ -110,7 +110,6 @@ a:active {
 }
 
 .spacer {
-  height: 5%;
   display: block;
 }
 
@@ -137,10 +136,7 @@ a:active {
   float: left;
   width: 60px;
   height: 60px;
-  margin-top: 4%;
-  margin-bottom: 1%;
-  margin-left: 3%;
-  margin-right: 6%;
+  margin: 4% 6% 1% 3%;
   display: inline-block;
 }
 #profile-avatar {
@@ -181,30 +177,24 @@ h1 {
 .about-content {
   font-size: 14px;
   margin-bottom: 4%;
-  font-weight: bolder;
 }
 
 .main-content {
   width: 80%;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin: 0 auto;
   background-color: white;
-  display: inline-block;
 }
+
 /*-------------IMAGE STYLES---------------*/
 
 .img-left {
   float: left;
   margin-right: 4%;
-  border-right: 1px solid black;
-  border-bottom: 1px solid black;
 }
 .img-right {
   float: right;
   margin-left: 0.5%;
   margin-top: 1%;
-  border-left: 1px solid black;
-  border-top: 1px solid black;
 }
 
 .img-small {
@@ -227,31 +217,27 @@ h1 {
   padding-top: 8px;
   text-align: center;
 }
-.music-title-rule {
-  margin: 0;
+
+.music-section-rule {
+  width: 80%;
 }
 
 .music-info-album-box,
 .music-info-box {
-  position: relative;
-  display: inline;
+  display: block;
   background-color: white;
-  height: 200px;
-  padding: 12px;
-  margin-top: 75px;
+  margin-top: 0px;
 }
 .music-info-album-box {
-  float: left;
+  height: 100px;
 }
 .music-info-box {
-  float: right;
-  width: 50%;
+  width: 65%;
 }
 
 .color-block-horizontal,
 .color-block-vertical {
   position: absolute;
-  display: none;
 }
 .color-block-horizontal {
   width: 100%;
@@ -269,29 +255,57 @@ h1 {
   bottom: 0;
   right: 0;
 }
-.album-art-credit {
-  position: absolute;
-  bottom: 12px;
-  right: 12px;
-}
 
 /*------------MEDIA QUERIES------------*/
 
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 579px) {
 /*Prevent larger screens from ever loading this ineffective styling*/
-  @media screen and (min-width: 380px) {
+  @media screen and (min-width: 300px) {
     #profile-picture-container {
       margin-right: 4%;
     }
     .main-navbar li {
-      margin-left: 6%;
+      margin-left: 4%;
       margin-right: 0;
     }
     .icon {
       width: 28px;
     }
+    .main-content {
+      position: relative;
+      padding: 12px;
+    }
+    .music-section {
+      padding: 12px;
+    }
+    .music-info-album-box,
+    .music-info-box {
+      float: none;
+      width: 100%;
+      text-align: center;
+    }
+    .color-block-vertical,
+    .color-block-horizontal {
+      display: block;
+    }
+    .album-art-credit {
+      bottom: 0;
+      right: 0;
+      position: relative;
+      margin-top: 2%;
+    }
+    .album-title-rule {
+      display: none;
+    }
+    .spacer {
+      height: 10%;
+    }
   }
-
+  @media screen and (min-width: 350px) {
+    .main-navbar li {
+      margin-left: 6%;
+    }
+  }
   @media screen and (min-width: 420px) {
     .main-navbar {
       height: 108px;
@@ -341,7 +355,7 @@ h1 {
 /*========================================================*/
 /*========================================================*/
 
-@media screen and (min-width: 570px) {
+@media screen and (min-width: 580px) {
 
   /*----------------SIDE NAVBAR-----------------*/
 
@@ -416,68 +430,46 @@ h1 {
 
   /*-------------MUSIC PAGE--------------*/
 
-  .music-info-album-box {
-    height: 125px;
-  }
-  .music-info-box {
-    font-size: 14px;
-  }
-  .music-info-box {
-    width: 50%;
-  }
   #music-title {
     border-left: 2px solid black;
     border-right: 2px solid black;
     border-bottom: 2px solid black;
   }
-  .music-title-rule {
-    display: none;
-  }
-  /*
   .music-info-album-box,
   .music-info-box {
     position: relative;
     display: inline;
     background-color: white;
-    height: 200px;
-    padding: 12px;
     margin-top: 75px;
+    padding: 12px;
+    height: 200px;
+    clear: right;
   }
   .music-info-album-box {
     float: left;
+    height: 125px;
   }
   .music-info-box {
-    float: right;
+    font-size: 14px;
     width: 50%;
+    float: right;
   }
-
-  .color-block-horizontal,
-  .color-block-vertical {
-    position: absolute;
+  .music-section-rule {
     display: none;
   }
-  .color-block-horizontal {
-    width: 100%;
-    height: 12px;
-  }
+  .color-block-horizontal,
   .color-block-vertical {
-    width: 12px;
-    height: 100%;
-  }
-  .top {
-    top: 0;
-    left: 0;
-  }
-  .bottom {
-    bottom: 0;
-    right: 0;
+    display: none;
   }
   .album-art-credit {
     position: absolute;
     bottom: 12px;
     right: 12px;
-  }*/
-
+  }
+  /*------------------MISC.-------------------*/
+  .spacer {
+    height: 5%;
+  }
   /*--------------MEDIA QUERIES---------------*/
   @media screen and (min-width: 662px) {
     .main-content {

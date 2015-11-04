@@ -10,7 +10,7 @@ $(document).on("ready", function() {
     || document.documentElement.clientWidth
     || document.body.clientWidth;
 
-    if (winWidth < 565) {
+    if (winWidth < 580) {
       $(".text").stop().css({ display: "block" });
     } else {
       $(".text").stop().css({ display: "none" });
@@ -24,7 +24,7 @@ $(document).on("ready", function() {
 
   //Random color changing functions #supergay
   function gayRainbowBorder() {
-    if(winWidth > 564) {
+    if(winWidth > 580) {
       $(this).animate({ borderColor: randomHue() }, 'slow', function() {
       $(this).animate({ borderColor: randomHue() }, 'slow', gayRainbowBorder);
       });
@@ -38,7 +38,7 @@ $(document).on("ready", function() {
 
   //Hovered Elements that it applies to:
   $("#profile-avatar").hover(gayRainbowBorder, function() {
-    if(winWidth > 564) {
+    if(winWidth > 580) {
       $(this).animate({ borderColor: 'white' }, 'slow');
       $(this).stop();
     }
@@ -71,20 +71,22 @@ $(document).on("ready", function() {
 
   $(".music-info-box").hover(
     function() {
-      var musicParent = $(this).closest(".music-section");
-
-      musicParent.find("#cba1").show("slide", { direction: "left"}, 200 );
-      musicParent.find("#cba2").show("slide", { direction: "right"}, 200 );
-      musicParent.find("#cba3").show("slide", { direction: "down"}, 200 );
-      musicParent.find("#cba4").show("slide", { direction: "up"}, 200 );
+      if (winWidth >= 580) {
+        var musicParent = $(this).closest(".music-section");
+        musicParent.find(".cba1").show("slide", { direction: "left"}, 200 );
+        musicParent.find(".cba2").show("slide", { direction: "right"}, 200 );
+        musicParent.find(".cba3").show("slide", { direction: "down"}, 200 );
+        musicParent.find(".cba4").show("slide", { direction: "up"}, 200 );
+      }
     },
     function() {
-      var musicParent = $(this).closest(".music-section");
-
-      musicParent.find("#cba1").hide("slide", { direction: "left"}, 200 );
-      musicParent.find("#cba2").hide("slide", { direction: "right"}, 200 );
-      musicParent.find("#cba3").hide("slide", { direction: "down"}, 200 );
-      musicParent.find("#cba4").hide("slide", { direction: "up"}, 200 );
+      if(winWidth >= 580) {
+        var musicParent = $(this).closest(".music-section");
+        musicParent.find(".cba1").hide("slide", { direction: "left"}, 200 );
+        musicParent.find(".cba2").hide("slide", { direction: "right"}, 200 );
+        musicParent.find(".cba3").hide("slide", { direction: "down"}, 200 );
+        musicParent.find(".cba4").hide("slide", { direction: "up"}, 200 );
+      }
     }
   );
 

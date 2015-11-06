@@ -1,3 +1,7 @@
+//JQUERY ANIMATION + INTERACTIVES
+//by Lunanova
+
+
 $(document).on("ready", function() {
 
   //Width variable for animation checking & event checker for screen resize
@@ -18,7 +22,7 @@ $(document).on("ready", function() {
   })
 
   //Selecting a random hue for color changing functions
-  var randomHue = function() {
+  function randomHue() {
     return 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
   };
 
@@ -67,7 +71,8 @@ $(document).on("ready", function() {
   })
 
   //MUSIC PAGE: Color Block Focus Animation
-  //TODO: A Cleaner Way to do this. I'm new to JQuery >:v
+  //TODO: A cleaner way to do this. I know there's some shortcut or something
+  //that I don't know about. I'm new to JQuery, okay?! >:v
 
   $(".music-info-box").hover(
     function() {

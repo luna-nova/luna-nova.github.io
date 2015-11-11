@@ -1,14 +1,88 @@
-var portfolio = angular.module("portfolio", ["ngRoute"])
+//ANGULAR ROUTING
+//by Lunanova
+
+var portfolio = angular.module("portfolio", ["ngRoute", "music", "home"])
   .config(["$routeProvider", function ($routeProvider){
   $routeProvider
     .when("/", {
-      templateUrl: "partials/home.html"
+      templateUrl: "partials/home.html",
+      controller: "HomeController"
     })
     .when("/music", {
-      templateUrl: "partials/music.html"
+      templateUrl: "partials/music.html",
+      controller: "MusicController"
     });
   }]);
 
 portfolio.controller("MainController", function($scope) {
+
+  //Width variable for animation checking & event checker for screen resize
+  $scope.winWidth = window.innerWidth
+  || document.documentElement.clientWidth
+  || document.body.clientWidth;
+
+  $(window).on("resize", function() {
+    $scope.winWidth = window.innerWidth
+    || document.documentElement.clientWidth
+    || document.body.clientWidth;
+
+    if ($scope.winWidth < 580) {
+      $(".text").stop().css({ display: "block" });
+    } else {
+      $(".text").stop().css({ display: "none" });
+    }
+  })
+
+  //Selecting a random hue for color changing functions
+  $scope.randomHue = function() {
+    return 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
+  };
+
+  //Random color changing functions #supergay
+  function gayRainbowBorder() {
+    if($scope.winWidth > 580) {
+      $(this).animate({ borderColor: $scope.randomHue() }, 'slow', function() {
+      $(this).animate({ borderColor: $scope.randomHue() }, 'slow', gayRainbowBorder);
+      });
+    }
+  }
+
+  //SIDEBAR: Avatar color changing border
+  $("#profile-avatar").hover(gayRainbowBorder, function() {
+    if($scope.winWidth > 580) {
+      $(this).animate({ borderColor: 'white' }, 'slow');
+      $(this).stop();
+    }
+  });
+  //If it is a mobile device
+  $("#profile-avatar").on('click', function() {
+    if($scope.winWidth < 580) {
+      $(this).css({ borderColor: $scope.randomHue() });
+    }
+  })
+
+  //SIDEBAR: Sliding link text
+  $(".icon").hover(
+    function() {
+      if ($scope.winWidth > 580) {
+        $(this).closest(".image-link").next().stop().slideDown("fast");
+      }
+    },
+    function() {
+      if ($scope.winWidth > 580) {
+        $(this).closest(".image-link").next().stop().slideUp("fast");
+      }
+    }
+  );
+
+  //Check which page partial to set classes
+  $scope.whichPage = function(page) {
+    if (page === "home") {
+      $("body").removeClass("music-background");
+    }
+    if (page === "music") {
+      $("body").addClass("music-background");
+    }
+  }
 
 });

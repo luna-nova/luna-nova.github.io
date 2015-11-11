@@ -208,7 +208,7 @@ h1 {
 }
 /*-------------MUSIC PAGE--------------*/
 
-#music-background {
+.music-background {
   background-image: url("http://www.woollettaquanet.info/SheetMusic/background-rotate/04-MusicOldSheets.jpg");
 }
 #music-title {

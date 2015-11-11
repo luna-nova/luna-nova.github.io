@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="portfolio">
   <head>
     <meta name="viewport" content="width=device-width" charset="utf-8">
     <!-- =============STYLESHEETS================ -->
@@ -9,12 +9,13 @@
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet" type="text/css">
     <!-- ==============SCRIPTS=================== -->
-    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-    <script src="./js/action.js"></script>
+    <script src="./lib/angular.min.js"></script>
+    <script src="./lib/angular-route.min.js"></script>
     <title>A Magical World</title>
   </head>
-  <body>
+  <body ng-controller="MainController">
     <!-- ===================SIDE NAVBAR======================== -->
     <!-- ====================================================== -->
     <nav class="main-navbar">
@@ -26,13 +27,13 @@
       <ul class="navbar-list font-ubuntu">
         <li>
           <div class="link-space">
-            <a href="#" class="image-link"><img src="http://findicons.com/files/icons/2337/wireframe_toolbar_icons/48/home.png" alt="icon of a home" class="icon"></a>
+            <a href="#/" class="image-link" ng-click="whichPage('home')"><img src="http://findicons.com/files/icons/2337/wireframe_toolbar_icons/48/home.png" alt="icon of a home" class="icon"></a>
             <h3 class="red text">Home</h3>
           </div>
         </li>
         <li>
           <div class="link-space">
-            <a href="./partials/music.html" class="image-link"><img src="http://www.iconsdb.com/icons/preview/white/musical-note-xl.png" alt="icon of a two eighth notes" class="icon"></a>
+            <a href="#/music" class="image-link" ng-click="whichPage('music')"><img src="http://c.dryicons.com/images/icon_sets/shine_icon_set/png/128x128/music_note.png" alt="icon of a two eighth notes" class="icon"></a>
             <h3 class="blue text">Music</h3>
           </div>
         </li>
@@ -49,24 +50,15 @@
           </div>
         </li>
       </ul>
-
     </nav>
     <!-- ===================MAIN CONTENT======================== -->
     <!-- ======================================================= -->
-    <div class="main-wrapper">
-      <div class="main-content">
-        <h1 class="font-josefin about-title">WHO AM I?</h1>
-        <hr class="fade-rule">
-        <img src="./images/ahhcomic.jpg" class="img-left img-small">
-        <p class="font-quicksand about-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p class="font-quicksand about-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        <img src="http://lorempixel.com/200/200" class="img-right img-small">
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <div class="main-wrapper" ng-view>
 
-        <h1 class="font-josefin about-title">CONTACT</h1>
-        <hr class="fade-rule">
-        <p class="font-quicksand about-content">Want to say hi? Feel free to send me an email to <a href="mailto:heartofnova@gmail.com" class="email-link">heartofnova@gmail.com</a>! I love chatting about anything.</p>
-      </div>
     </div>
+
+    <script src="./js/main-ctrl.js"></script>
+    <script src="./js/home.js"></script>
+    <script src="./js/music.js"></script>
   </body>
 </html>

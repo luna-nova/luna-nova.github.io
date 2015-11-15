@@ -24,11 +24,15 @@ portfolio.controller("MainController", function($scope) {
   $scope.winWidth = window.innerWidth
   || document.documentElement.clientWidth
   || document.body.clientWidth;
-
-  $(window).on("resize", function() {
+  //Function to reset width variable on resize
+  $scope.widthChecker = function() {
     $scope.winWidth = window.innerWidth
     || document.documentElement.clientWidth
     || document.body.clientWidth;
+  }
+  //Utilizing the previous function
+  $(window).on("resize", function() {
+    $scope.widthChecker();
 
     if ($scope.winWidth < 580) {
       $(".text").stop().css({ display: "block" });

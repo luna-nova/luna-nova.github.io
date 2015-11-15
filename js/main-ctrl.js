@@ -1,12 +1,16 @@
 //ANGULAR ROUTING
 //by Lunanova
 
-var portfolio = angular.module("portfolio", ["ngRoute", "music", "home"])
+var portfolio = angular.module("portfolio", ["ngRoute", "music", "home", "code"])
   .config(["$routeProvider", function ($routeProvider){
   $routeProvider
     .when("/", {
       templateUrl: "partials/home.html",
       controller: "HomeController"
+    })
+    .when("/code", {
+      templateUrl: "partials/code.html",
+      controller: "CodeController"
     })
     .when("/music", {
       templateUrl: "partials/music.html",
@@ -77,12 +81,7 @@ portfolio.controller("MainController", function($scope) {
 
   //Check which page partial to set classes
   $scope.whichPage = function(page) {
-    if (page === "home") {
-      $("body").removeClass("music-background");
-    }
-    if (page === "music") {
-      $("body").addClass("music-background");
-    }
+    $("body").removeClass().addClass(page + "-background");
   }
 
 });

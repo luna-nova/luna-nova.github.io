@@ -7,9 +7,7 @@ music.controller("MusicController", function($scope) {
 
   $(".music-info-box").hover(
     function() {
-      if ((window.innerWidth
-      || document.documentElement.clientWidth
-      || document.body.clientWidth) >= 580) {
+      if ($scope.$parent.winWidth >= 580) {
         var musicParent = $(this).closest(".music-section");
         musicParent.find(".cba1").show("slide", { direction: "left"}, 200 );
         musicParent.find(".cba2").show("slide", { direction: "right"}, 200 );
@@ -18,9 +16,7 @@ music.controller("MusicController", function($scope) {
       }
     },
     function() {
-      if((window.innerWidth
-      || document.documentElement.clientWidth
-      || document.body.clientWidth) >= 580) {
+      if($scope.$parent.winWidth >= 580) {
         var musicParent = $(this).closest(".music-section");
         musicParent.find(".cba1").hide("slide", { direction: "left"}, 200 );
         musicParent.find(".cba2").hide("slide", { direction: "right"}, 200 );
@@ -29,6 +25,6 @@ music.controller("MusicController", function($scope) {
       }
     }
   );
-  
+
   $scope.$parent.whichPage("music");
 })

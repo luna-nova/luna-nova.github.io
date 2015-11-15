@@ -61,6 +61,9 @@ a:active {
 .font-quicksand {
   font-family: 'Quicksand', sans-serif;
 }
+.font-courier {
+  font-family: Courier;
+}
 
 
 .blue {
@@ -92,6 +95,9 @@ a:active {
 }
 .darker-red {
   color: rgb(231, 164, 164) !important;
+}
+.white {
+  color: rgb(246, 246, 246);
 }
 
 /*==================MISC. CLASSES=======================*/
@@ -256,24 +262,53 @@ h1 {
   right: 0;
 }
 
+/*------------CODE PAGE------------*/
+
+.code-background {
+  background-color: rgb(25, 25, 25);
+}
+
+#code-title {
+  border: none;
+  outline: none;
+  resize: none;
+  text-align: center;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(255, 255, 255, 0);
+  font-size: 36px;
+  max-width: 100%;
+  max-height: 40px;
+}
+
+.code-green {
+  color: rgb(0, 223, 22);
+}
+
 /*------------MEDIA QUERIES------------*/
 
 @media screen and (max-width: 579px) {
 /*Prevent larger screens from ever loading this ineffective styling*/
-  @media screen and (min-width: 300px) {
+  .color-block-vertical,
+  .color-block-horizontal {
+    display: block;
+  }
+  .main-content {
+    position: relative;
+    padding: 12px;
+  }
+  @media screen and (min-width: 240px) {
     #profile-picture-container {
       margin-right: 4%;
     }
     .main-navbar li {
-      margin-left: 4%;
+      margin-left: 2%;
       margin-right: 0;
     }
     .icon {
       width: 28px;
-    }
-    .main-content {
-      position: relative;
-      padding: 12px;
     }
     .music-section {
       padding: 12px;
@@ -283,10 +318,6 @@ h1 {
       float: none;
       width: 100%;
       text-align: center;
-    }
-    .color-block-vertical,
-    .color-block-horizontal {
-      display: block;
     }
     .album-art-credit {
       bottom: 0;
@@ -301,9 +332,24 @@ h1 {
       height: 10%;
     }
   }
-  @media screen and (min-width: 350px) {
+  @media screen and (min-width: 290px) {
     .main-navbar li {
-      margin-left: 6%;
+      margin-left: 3%;
+    }
+  }
+  @media screen and (min-width: 310px) {
+    .main-navbar li {
+      margin-left: 4%;
+    }
+  }
+  @media screen and (min-width: 340px) {
+    .main-navbar li {
+      margin-left: 5.6%;
+    }
+  }
+  @media screen and (min-width: 370px) {
+    .main-navbar li {
+      margin-left: 7%;
     }
   }
   @media screen and (min-width: 420px) {
@@ -314,7 +360,7 @@ h1 {
     #profile-picture-container {
       width: 75px;
       height: 75px;
-      margin-top: 2%;
+      margin-top: 2.1%;
       margin-right: 8%;
     }
     .main-navbar li {

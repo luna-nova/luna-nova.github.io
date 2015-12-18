@@ -202,7 +202,6 @@ h1 {
 
 .img-small {
   width: 125px;
-  height: 125px;
 }
 
 .img-album {
@@ -484,7 +483,6 @@ h1 {
 
   .img-small {
     width: 150px;
-    height: 150px;
   }
   .img-album {
     width: 125px;
@@ -564,7 +562,6 @@ h1 {
     }
     .img-small {
       width: 200px;
-      height: 200px;
     }
     .img-album {
       height: 200px;

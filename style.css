@@ -135,6 +135,12 @@ a:active {
   background-color: rgb(54, 50, 61);
 }
 
+.navbar-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
 #profile-picture-container {
   float: left;
   width: 60px;
@@ -151,13 +157,9 @@ a:active {
 .main-navbar li {
   display: inline-block;
   text-align: center;
-  margin-left: 3%;
 }
 .link-space {
-  float: right;
   padding-top: 24px;
-  height: 60px;
-  margin-bottom: 8px;
 }
 .text {
   display: block;
@@ -307,11 +309,8 @@ h1 {
   }
   @media screen and (min-width: 240px) {
     #profile-picture-container {
+      margin-top: 5%;
       margin-right: 4%;
-    }
-    .main-navbar li {
-      margin-left: 2%;
-      margin-right: 0;
     }
     .icon {
       width: 28px;
@@ -339,23 +338,19 @@ h1 {
     }
   }
   @media screen and (min-width: 290px) {
-    .main-navbar li {
-      margin-left: 3%;
-    }
+
   }
   @media screen and (min-width: 310px) {
-    .main-navbar li {
-      margin-left: 4%;
+    #profile-picture-container {
+      margin-top: 4%;
     }
   }
   @media screen and (min-width: 340px) {
-    .main-navbar li {
-      margin-left: 5.6%;
-    }
+
   }
   @media screen and (min-width: 370px) {
-    .main-navbar li {
-      margin-left: 7%;
+    #profile-picture-container {
+      margin-top: 3%;
     }
     #code-title {
       font-size: 30px;
@@ -370,13 +365,10 @@ h1 {
       max-height: 125px;
     }
     #profile-picture-container {
-      width: 75px;
-      height: 75px;
-      margin-top: 2.1%;
-      margin-right: 8%;
-    }
-    .main-navbar li {
-      margin-left: 6%;
+      width: 70px;
+      height: 70px;
+      margin-top: 3%;
+      margin-right: 7%;
     }
     .icon {
       width: 36px;
@@ -391,18 +383,8 @@ h1 {
       padding-top: 2%;
       height: 111.5px;
     }
-    .main-navbar li {
-      margin-left: 10%;
-    }
-    .link-space {
-      padding-top: 18px;
-      height: 82px;
-    }
     #profile-picture-container {
-      margin-top: .5%;
-      margin-bottom: 1%;
-      margin-left: 3%;
-      margin-right: 0;
+      margin: 2% 5% 1% 3%;
     }
     .about-content {
       font-size: 18px;
@@ -426,6 +408,10 @@ h1 {
     -webkit-box-shadow: 4px 0px 2px 0px rgb(5, 5, 5);
     -moz-box-shadow: 4px 0px 2px 0px rgb(5, 5, 5);
     box-shadow: 4px 0px 2px 0px rgb(5, 5, 5);
+  }
+
+  .navbar-list {
+    flex-direction: column;
   }
 
   #profile-picture-container {

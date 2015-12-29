@@ -119,6 +119,10 @@ a:active {
   display: block;
 }
 
+.not-yet {
+  display: none !important;
+}
+
 /*===================IF IT IS MOBILE======================*/
 /*========================================================*/
 /*========================================================*/
@@ -133,6 +137,23 @@ a:active {
   height: 98px;
   max-height: 102px;
   background-color: rgb(54, 50, 61);
+}
+
+.navbar-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
 }
 
 #profile-picture-container {
@@ -151,13 +172,9 @@ a:active {
 .main-navbar li {
   display: inline-block;
   text-align: center;
-  margin-left: 3%;
 }
 .link-space {
-  float: right;
   padding-top: 24px;
-  height: 60px;
-  margin-bottom: 8px;
 }
 .text {
   display: block;
@@ -202,7 +219,6 @@ h1 {
 
 .img-small {
   width: 125px;
-  height: 125px;
 }
 
 .img-album {
@@ -308,11 +324,8 @@ h1 {
   }
   @media screen and (min-width: 240px) {
     #profile-picture-container {
+      margin-top: 5%;
       margin-right: 4%;
-    }
-    .main-navbar li {
-      margin-left: 2%;
-      margin-right: 0;
     }
     .icon {
       width: 28px;
@@ -339,24 +352,20 @@ h1 {
       height: 10%;
     }
   }
-  @media screen and (min-width: 290px) {
-    .main-navbar li {
-      margin-left: 3%;
-    }
-  }
+  /*@media screen and (min-width: 290px) {
+
+  }*/
   @media screen and (min-width: 310px) {
-    .main-navbar li {
-      margin-left: 4%;
+    #profile-picture-container {
+      margin-top: 4%;
     }
   }
-  @media screen and (min-width: 340px) {
-    .main-navbar li {
-      margin-left: 5.6%;
-    }
-  }
+  /*@media screen and (min-width: 340px) {
+
+  }*/
   @media screen and (min-width: 370px) {
-    .main-navbar li {
-      margin-left: 7%;
+    #profile-picture-container {
+      margin-top: 3%;
     }
     #code-title {
       font-size: 30px;
@@ -371,13 +380,10 @@ h1 {
       max-height: 125px;
     }
     #profile-picture-container {
-      width: 75px;
-      height: 75px;
-      margin-top: 2.1%;
-      margin-right: 8%;
-    }
-    .main-navbar li {
-      margin-left: 6%;
+      width: 70px;
+      height: 70px;
+      margin-top: 3%;
+      margin-right: 7%;
     }
     .icon {
       width: 36px;
@@ -392,18 +398,8 @@ h1 {
       padding-top: 2%;
       height: 111.5px;
     }
-    .main-navbar li {
-      margin-left: 10%;
-    }
-    .link-space {
-      padding-top: 18px;
-      height: 82px;
-    }
     #profile-picture-container {
-      margin-top: .5%;
-      margin-bottom: 1%;
-      margin-left: 3%;
-      margin-right: 0;
+      margin: 2% 5% 1% 3%;
     }
     .about-content {
       font-size: 18px;
@@ -429,24 +425,26 @@ h1 {
     box-shadow: 4px 0px 2px 0px rgb(5, 5, 5);
   }
 
+  .navbar-list {
+    flex-direction: column;
+    justify-content: space-around;
+    height: 80%;
+  }
+
   #profile-picture-container {
     float: none;
     width: 100px;
     height: 100px;
     margin-top: 8%;
     margin-left: 7%;
-    margin-bottom: 35%;
   }
-
   .main-navbar li {
-    display: block;
     text-align: center;
     margin-left: 0;
   }
   .link-space {
     float: none;
-    height: 125px;
-    width: 125px;
+    height: 48px;
     padding: 0;
   }
   .text {
@@ -484,7 +482,6 @@ h1 {
 
   .img-small {
     width: 150px;
-    height: 150px;
   }
   .img-album {
     width: 125px;
@@ -564,7 +561,6 @@ h1 {
     }
     .img-small {
       width: 200px;
-      height: 200px;
     }
     .img-album {
       height: 200px;
